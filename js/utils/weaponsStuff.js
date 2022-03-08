@@ -56,11 +56,11 @@ function getWeapons() {
 /* Picks a random weapon depending on its rarity */
 function pickRarity() {
     const rarities = [
-        { type: "Consumer", chances: 50 },
-        { type: "Industrial", chances: 30 },
+        { type: "Consumer", chances: 40 },
+        { type: "Industrial", chances: 40 },
         { type: "Mil-spec", chances: 10 },
-        { type: "Restricted", chances: 7 },
-        { type: "Classified", chances: 2 },
+        { type: "Restricted", chances: 5 },
+        { type: "Classified", chances: 4 },
         { type: "Covert", chances: 1 },
     ];
 

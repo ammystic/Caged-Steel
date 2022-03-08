@@ -41,7 +41,7 @@ function generateCaseItem(rarities) {
     const openAudio = new Audio("./audio/crate_open.wav");
 
     openAudio.volume = .1;
-    setInterval(() => asideWeapons(weapons, Math.floor(800 * Math.random() + 500)), Math.floor(800 * Math.random() + 500));
+    setInterval(() => asideWeapons(weapons, Math.floor(1200 * Math.random() + 900)), Math.floor(800 * Math.random() + 500));
 
 
     // Called when opening a case
