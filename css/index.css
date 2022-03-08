@@ -99,7 +99,7 @@ ul {margin: 0;list-style-type: none;}
     height: 2.5pc;
     border-radius: 50%;
     margin-right: 2vh;
-    background-image: url(./img/utils/default_avatar.jpg);
+    background-image: url(../img/utils/default_avatar.jpg);
     background-size: cover;
 }
 .navbar .logged li .balance {
