@@ -105,7 +105,7 @@ function generateCaseItem(rarities) {
         for (const button of buttons) {
             const cloned = button.cloneNode(true);
             cloned.disabled = true,
-            button.parentNode.replaceChild(button, cloned);
+            button.parentNode.replaceChild(cloned, button);
         }
     }
 
