@@ -38,7 +38,7 @@ function generateCaseItem(rarities) {
 
     const weapons = await getWeapons();
     const cases = await displayCases();
-    const openAudio = new Audio("/audio/crate_open.wav");
+    const openAudio = new Audio("./audio/crate_open.wav");
 
     openAudio.volume = .1;
     setInterval(() => asideWeapons(weapons, Math.floor(800 * Math.random() + 500)), Math.floor(800 * Math.random() + 500));
@@ -95,7 +95,7 @@ function generateCaseItem(rarities) {
 
         // Shows the item won in the aside & in a modal
         pushInAside(cleanName, openedWeapon.skin, skin[0].rarity);
-        new Modal(`${cleanName} | ${skin[0].name}<div class="skinImage border_bottom-${skin[0].rarity.toLowerCase()}"><img src="/img/skins/${folder}${cleanName.replace(/ /g, "_")}/${openedWeapon.skin.replace(/ /g, "_")}.png"></div>Price: ${skin[0].price}`);
+        new Modal(`${cleanName} | ${skin[0].name}<div class="skinImage border_bottom-${skin[0].rarity.toLowerCase()}"><img decoding="async" loading="lazy" src="./img/skins/${folder}${cleanName.replace(/ /g, "_")}/${openedWeapon.skin.replace(/ /g, "_")}.png"></div>Price: ${skin[0].price}`);
     });
 
     // If not logged

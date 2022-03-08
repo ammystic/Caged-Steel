@@ -7,7 +7,7 @@ const weapons = JSON.parse(localStorage.getItem("weapons"));
 
 
 /* Html elements + Audio */
-const caseScroll = new Audio("/audio/crate_scroll.wav");
+const caseScroll = new Audio("./audio/crate_scroll.wav");
 const html = {
     price: document.getElementById("price"),
     caseContent: document.getElementById("caseContent"),
@@ -40,7 +40,7 @@ function getCases() {
     return new Promise(async (res, rej) => {
         try {
             // Fetch cases
-            const cases = await fetch("/json/cases.json");
+            const cases = await fetch("./json/cases.json");
             return res((await cases.json()).cases);
         } catch (e) {
             return rej(e);
@@ -112,7 +112,7 @@ function openCasePage(_case = { close: true }) {
             const weaponDiv = document.createElement("div");
             weaponDiv.classList.add("caseItem", `${border}${skin[0].rarity.toLowerCase()}`);
             weaponDiv.dataset.weapon = `${item.weapon}-${item.skin}`;
-            weaponDiv.innerHTML = `<img src="/img/skins/${item.weapon.replace(/ /g, "_")}/${item.skin.replace(/ /g, "_")}.png">`;
+            weaponDiv.innerHTML = `<img decoding="async" loading="lazy" src="./img/skins/${item.weapon.replace(/ /g, "_")}/${item.skin.replace(/ /g, "_")}.png">`;
 
             parent.appendChild(weaponDiv)
         }
@@ -144,7 +144,7 @@ function displayCases() {
         // For loop all the cases
         for (const _case of allCases){
             const name = _case.name.replace(/ /g, "_").toLowerCase();
-            casesContainer.innerHTML += `<div class="case"><h2>${_case.name}</h2><img src="/img/cases/${name}.png"><button data-caseurl="${name}" class="openCasePage">Open ${_case.price}€</button></div>`;
+            casesContainer.innerHTML += `<div class="case"><h2>${_case.name}</h2><img decoding="async" loading="lazy" src="./img/cases/${name}.png"><button data-caseurl="${name}" class="openCasePage">Open ${_case.price}€</button></div>`;
         }
 
         // Open case button

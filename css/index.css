@@ -19,6 +19,7 @@
 *:disabled {opacity: 0.7;cursor: not-allowed;}
 body {margin: 0;font-family: 'DM Sans', sans-serif;overflow: hidden;}
 a, a:visited, a:focus {color: var(--purple);text-decoration: none;}
+img {content-visibility: auto;}
 button {
     margin-top: 2pc;
     border-radius: 60px;

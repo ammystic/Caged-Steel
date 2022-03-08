@@ -21,8 +21,8 @@ function pushInAside(weapon, name, rarity) {
     tempIMG.onload = () => { img.src = tempIMG.src; }; // Loads the weapon img
 
     // Checks if it's a knife or not
-    if (["bayonet", "gut", "karambit", "navaja"].includes(weapon)) { tempIMG.src = `/img/skins/knives/${weapon.replace(/ /g, "_")}/${name.replace(/ /g, "_")}.png`; }
-    else { tempIMG.src += `/img/skins/${weapon.replace(/ /g, "_")}/${name.replace(/ /g, "_")}.png`; }
+    if (["bayonet", "gut", "karambit", "navaja"].includes(weapon)) { tempIMG.src = `./img/skins/knives/${weapon.replace(/ /g, "_")}/${name.replace(/ /g, "_")}.png`; }
+    else { tempIMG.src += `./img/skins/${weapon.replace(/ /g, "_")}/${name.replace(/ /g, "_")}.png`; }
 
     // Shows in the aside
     li.classList.add(rarity.toLowerCase());
@@ -44,7 +44,7 @@ function getWeapons() {
     return new Promise(async (res, rej) => {
         try {
             // Fetch request
-            const weapons = await fetch("/json/weapons.json");
+            const weapons = await fetch("./json/weapons.json");
             return res(await weapons.json());
         } catch (e) {
             return rej(e);
