@@ -79,7 +79,7 @@ function openProfilePage(close = false) {
         if (knives.includes(item.weapon)){ folder = "knives/"; }
 
         const container = document.createElement("div");
-        container.innerHTML = `<div class="details"><span>${item.weapon.toUpperCase()} | ${item.skin}</span><span>${item.price}</span></div><img decoding="async" loading="lazy" src="./img/skins/${folder}${item.weapon.replace(/ /g, "_")}/${formatted.toLowerCase()}.png">`
+        container.innerHTML = `<div class="details"><span>${item.weapon.toUpperCase()} | ${item.skin}</span><span>${item.price}</span></div><img decoding="async" loading="lazy" src="./img/skins/${folder}${item.weapon.replace(/ /g, "_")}/${formatted}.png">`
         container.classList.add(`border-${item.rarity.toLowerCase()}`);
 
         const sellBTN = document.createElement("button");
@@ -106,7 +106,7 @@ function openProfilePage(close = false) {
                 let formatted = weapon.skin.replace(/ /g, "_");        
                 if (knives.includes(weapon.weapon)){ folder = "knives/"; }
 
-                new Modal(` You sold ${weapon.weapon} | ${weapon.skin}<div class="skinImage ${weapon.rarity.toLowerCase()}"> <img decoding="async" loading="lazy" src="./img/skins/${folder}${weapon.weapon.replace(/ /g, "_")}/${formatted.toLowerCase()}.png"></div>Earned money: ${weapon.price}`)
+                new Modal(` You sold ${weapon.weapon} | ${weapon.skin}<div class="skinImage ${weapon.rarity.toLowerCase()}"> <img decoding="async" loading="lazy" src="./img/skins/${folder}${weapon.weapon.replace(/ /g, "_")}/${formatted}.png"></div>Earned money: ${weapon.price}`)
             });
         }
 }
