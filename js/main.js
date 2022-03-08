@@ -67,9 +67,11 @@ function generateCaseItem(rarities) {
 
         // Gets steam prices for more "realism"
         try {
-            const url = `https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=${fixedEncodeURIComponent(`${weapon} | ${skin[0].name} (Factory New)`)}`;
+            const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=${fixedEncodeURIComponent(`${weapon} | ${skin[0].name} (Factory New)`)}`)}`;
             const request = await fetch(url);
-            const data = await request.json();
+
+            let data = await request.json();
+            data = JSON.parse(data.contents);
 
             if (data.median_price != null) skin[0].price = data.median_price;
         } catch (e) { skin[0].price = NaN; }
