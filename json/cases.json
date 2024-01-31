@@ -44,27 +44,27 @@
                 {
                     "weapon": "Sawed-Off",
                     "skin": "Amber_Fade",
-                    "chances": 43
+                    "chances": 20
                 },
                 {
                     "weapon": "SSG_08",
                     "skin": "Acid_Fade",
-                    "chances": 40
+                    "chances": 10
                 },
                 {
                     "weapon": "M4A1-S",
                     "skin": "Nitro",
-                    "chances": 15
+                    "chances": 10
                 },
                 {
                     "weapon": "knives/navaja",
                     "skin": "fade",
-                    "chances": 100
+                    "chances": 50
                 },
                 {
                     "weapon": "AWP",
                     "skin": "Fade",
-                    "chances": 1
+                    "chances": 10
                 }
             ]
         },
