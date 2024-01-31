@@ -59,7 +59,7 @@
                 {
                     "weapon": "knives/navaja",
                     "skin": "fade",
-                    "chances": 1
+                    "chances": 100
                 },
                 {
                     "weapon": "AWP",
